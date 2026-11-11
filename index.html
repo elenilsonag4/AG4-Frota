@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102b46">
+<title>Gestão de Frota</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loginScreen" class="login-screen">
+  <form id="loginForm" class="login-card"><div class="brand-mark">GF</div><p class="eyebrow">GESTÃO INTELIGENTE</p><h1>Bem-vindo</h1><p class="muted">Acesse o painel de gestão da sua frota.</p>
+  <label>E-mail<input id="loginEmail" type="email" autocomplete="username" required placeholder="admin@frota.com"></label>
+  <label>Senha<input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Sua senha"></label>
+  <button class="primary full" type="submit">Entrar</button><p id="loginError" class="error"></p>
+  <div class="demo-hint"><b>Modo demonstração</b><br>admin@frota.com / admin123</div></form>
+</div>
+<div id="app" class="app-shell hidden">
+  <aside class="sidebar"><div class="brand"><div class="brand-mark small">GF</div><div><b>Frota<span>Gestão</span></b><small>PAINEL ADMINISTRATIVO</small></div></div>
+    <div class="workspace-label">MENU PRINCIPAL</div><nav id="sideNav" class="side-nav"></nav>
+    <div class="sidebar-bottom"><div class="user-mini"><div class="avatar" id="userAvatar">AD</div><div><b id="sideUser">Administrador</b><small id="sideRole">Administrador</small></div></div><button id="logoutBtn" class="logout">↪ Sair do sistema</button></div>
+  </aside>
+  <main class="main-area"><header class="topbar"><div><div class="crumb">GESTÃO DE FROTA / <b id="crumbCurrent">Início</b></div><h1 id="pageTitle">Visão geral</h1></div><div class="top-actions"><span class="today" id="todayLabel"></span><button class="icon-btn" id="themeBtn" title="Alternar tema">◐</button><div class="avatar" id="topAvatar">AD</div></div></header>
+  <section id="pageContent" class="page-content"></section>
+  <footer class="footer-note">Gestão de Frota <span>•</span> Dados salvos neste dispositivo no modo demonstração</footer></main>
+  <nav id="bottomNav" class="bottom-nav" aria-label="Navegação principal"></nav>
+</div>
+<div id="modalRoot"></div><div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>
